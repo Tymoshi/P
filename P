@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function validar_idade(){
+            let idade=window.prompt('Digite sua idade')
+            if(idade >= 18){
+                alert("Maior de idade")
+            }
+            else{
+                alert("Menor de idade")
+            }
+        }
+
+        function calcular_média(){
+            let nota1=parseInt(window.prompt('Digite sua nota'))
+            let nota2=parseInt(window.prompt('Digite sua nota'))
+            let nota3=parseInt(window.prompt('Digite sua nota'))
+            let nota4=parseInt(window.prompt('Digite sua nota'))
+              //(parseInt)transforma texto em um cálculo
+            let resultado=(nota1+nota2+nota3+nota4)/4
+            if(resultado < 7){
+                alert("Reprovado")
+            }
+            else{
+                alert("Aprovado")
+            }
+        }
+
+        function preco_maca(){
+            let totalmacas1=parseInt(window.prompt('Quantas maçãs quer comprar'))
+            let resultadom=(totalmacas1*1.30)
+            let resultadom2=(totalmacas1*1)
+            if(totalmacas1 >= 12){
+                alert(resultadom2+"reais à pagar")
+            }
+            else{
+               alert(resultadom+"reais à pagar")
+            }
+
+        }
+    </script>
+</head>
+<style>
+    
+    body{ 
+        background-color: gray;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    form{
+        background-color: rgb(179, 173, 173);
+    }
+    #botao{
+        width: 100px;
+        height: 50px;
+        background-color: gray;
+        text-align: center;
+        color: black;
+        border: solid 2px white;
+        border-radius: 10px;
+    }
+    
+</style>
+  <script>
+    //alert('Hello World')
+        //(alert)usado como notificação
+    //let nome = window.prompt('Digite seu nome') 
+        //(window.prompt)coloca uma notificação para inserir alguma informação
+    //alert('Seja bem vindo '+nome)
+    // let x = 10
+        //(let)= variável
+     //let y = 5
+  </script>
+
+ <body>
+   <center><h1>Cadastro</h1></center>
+    <!--(h1)insere títulos-->
+    <!--(center)centraliza títulos e textos-->
+    <form id="formulário" name="formulário">
+     <fieldset>
+        <!--(fieldset)enquadra um cadastro/informação-->
+        <legend>Cadastro de usuário </legend>
+        <!--(legend)título do fieldset-->
+        <label for="nome">Nome Completo: </label>
+        <input type="text" id="nome" name="nome" required autocomplete="off"> 
+        <!--(input)insere algum tipo de dado-->
+        <!--(required)torna algo obrigatório-->
+        <!--(autocomplete) para sugerir resposta de preenchimento(on/off)-->
+        <br>
+        <!--(br)pula linhas-->
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email"required>
+
+        <br>
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" required>
+
+        <br>
+        <label for="padrao">Digite 3 números e 2 letras</label>
+        <input type="text" id="padrao" name="padrao" required pattern="[0-9]{3}[a-z]{2}">
+        <!--(required pattern) padrão requerido-->
+
+        <br>
+        <label for="termos">Concorda com os termos de serviço?</label>
+        <input type="checkbox" checked id="termos" name="termos">
+        <!--(checked)preenche a checkbox automaticamente-->
+
+        <br>
+        <label for="opcao">A</label>
+        <input type="radio" id="opcao" name="opcao">
+
+        <label for="opcao">B</label>
+        <input type="radio" id="opcao" name="opcao">
+
+        <br><br>
+        <input type="submit" value="Enviar">
+
+     </fieldset>
+    </form>
+    <br>
+    <input type="button" id="idade" name="idade" value="Validar idade" onclick="validar_idade()">
+
+    <br><br>
+    <input type="button" id="aprovacao" name="aprovacao" value="Ver média" onclick="calcular_média()">
+
+    <br><br>
+    <input type="button" id="maca" name="maca" value="Preço da Maçâ" onclick="preco_maca()">
+   
+ </body>
+</html>
